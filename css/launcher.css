@@ -1,0 +1,26 @@
+/* ========== LAUNCHER PAGE ========== */
+.launcher-hero { position: relative; z-index: 1; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 100px 40px 80px; text-align: center; }
+.launcher-content { max-width: 900px; width: 100%; }
+.launcher-title { font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.8rem); letter-spacing: 4px; color: var(--text); margin-bottom: 12px; animation: fadeUp .5s .2s both; }
+.launcher-subtitle { font-family: var(--font-ui); font-size: 1.1rem; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; margin-bottom: 48px; animation: fadeUp .5s .35s both; }
+.screenshots-area { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 40px; animation: fadeUp .5s .5s both; }
+.screenshot-slot { aspect-ratio: 16/9; border-radius: 6px; overflow: hidden; border: 1px solid var(--border); background: var(--bg3); position: relative; }
+.screenshot-slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.slot-placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: var(--muted); font-family: var(--font-ui); font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; border: 2px dashed rgba(255,255,255,0.1); border-radius: 5px; }
+.slot-icon { font-size: 1.8rem; opacity: 0.4; }
+.launcher-features { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 28px; list-style: none; margin-bottom: 48px; animation: fadeUp .5s .65s both; }
+.launcher-features li { font-family: var(--font-ui); font-size: 0.95rem; font-weight: 600; letter-spacing: 1px; color: #ccc; text-transform: uppercase; }
+.launcher-features li span { color: var(--text); }
+.download-area { display: flex; flex-direction: column; align-items: center; gap: 24px; animation: fadeUp .5s .8s both; }
+.btn-download { font-family: var(--font-display); font-size: 1.05rem; letter-spacing: 3px; text-transform: uppercase; color: #fff; background: var(--red); border: none; padding: 18px 52px; border-radius: 3px; cursor: pointer; display: inline-flex; align-items: center; gap: 12px; transition: background .2s, transform .15s, box-shadow .2s; box-shadow: 0 0 0 rgba(230,57,70,0); }
+.btn-download:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(230,57,70,0.35); }
+.btn-download:active { transform: translateY(0); }
+.btn-download.loading { pointer-events: none; opacity: 0.7; }
+.dl-icon { font-size: 1.2rem; }
+.countdown-wrap { width: 100%; max-width: 440px; text-align: center; }
+.countdown-bar-bg { height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden; margin-bottom: 10px; }
+.countdown-bar { height: 100%; width: 100%; background: var(--red); border-radius: 2px; transform-origin: left; animation: shrinkBar 5s linear forwards; }
+@keyframes shrinkBar { from { transform: scaleX(1); } to { transform: scaleX(0); } }
+.countdown-text { font-family: var(--font-ui); font-size: 0.88rem; letter-spacing: 1px; color: var(--muted); text-transform: uppercase; }
+#secLeft { color: var(--red); font-weight: 700; }
+.dl-note { font-size: 0.8rem; color: var(--muted); margin-top: 12px; opacity: 0.7; animation: fadeUp .5s .95s both; }
