@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FlexServer — Hardcore Minecraft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Orbitron:wght@700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">
+      <span class="logo-flex">Flex</span><span class="logo-server">Server</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" data-i18n="nav_home">Ana Sayfa</a></li>
+      <li><a href="pages/launcher.html" data-i18n="nav_launcher">Launcher'ı İndir</a></li>
+      <li>
+        <button class="ip-btn" id="copyIpBtn" onclick="copyIP()">
+          <span class="ip-icon">⊕</span>
+          <span data-i18n="nav_ip">IP Kopyala</span>
+        </button>
+        <div class="ip-toast" id="ipToast" data-i18n="ip_copied">IP Kopyalandı!</div>
+      </li>
+      <li>
+        <button class="lang-btn" onclick="toggleLang()">
+          <span id="langLabel">TR / EN</span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+  <canvas id="bgCanvas"></canvas>
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-i18n="hero_eyebrow">⚔ Türkiye'nin En Sert Sunucusu</p>
+      <h1 class="hero-title">
+        <span class="word-flex">FLEX</span><br>
+        <span class="word-server">SERVER</span>
+      </h1>
+      <p class="hero-desc" data-i18n="hero_desc">
+        Benzersiz bir Minecraft Hardcore deneyimi seni bekliyor.<br>
+        Hayatta kal. Kazan. Ya da unut gitsin.
+      </p>
+      <div class="hero-btns">
+        <a href="pages/launcher.html" class="btn-primary" data-i18n="btn_launcher">Launcher'ı İndir</a>
+        <button class="btn-secondary" onclick="copyIP()" data-i18n="btn_ip">IP Kopyala</button>
+      </div>
+      <div class="server-ip-display">
+        <span class="ip-label" data-i18n="ip_label">Sunucu IP:</span>
+        <span class="ip-value">directly-prospect.gl.joinmc.link</span>
+      </div>
+    </div>
+  </section>
+  <section class="features">
+    <h2 class="section-title" data-i18n="features_title">Neden FlexServer?</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feat-icon">💀</div>
+        <h3 data-i18n="feat1_title">Gerçek Hardcore</h3>
+        <p data-i18n="feat1_desc">Bir kez ölürsün, her şeyi kaybedersin. Casuals welcome değil.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">⚡</div>
+        <h3 data-i18n="feat2_title">Düşük Gecikme</h3>
+        <p data-i18n="feat2_desc">Türkiye bazlı sunucularla ping sorununu unut.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">🏆</div>
+        <h3 data-i18n="feat3_title">Sezon Sistemi</h3>
+        <p data-i18n="feat3_desc">Her sezon sıfırdan başla, en iyiler liderboard'da taçlanır.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">🔧</div>
+        <h3 data-i18n="feat4_title">Özel Launcher</h3>
+        <p data-i18n="feat4_desc">Tek tıkla kur, direkt gir. Hiçbir ayar gerektirmez.</p>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <p>© 2025 FlexServer — <span data-i18n="footer_text">Tüm hakları saklıdır.</span></p>
+  </footer>
+  <script src="js/i18n.js"></script>
+  <script src="js/canvas.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
