@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FlexServer — Launcher İndir</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Orbitron:wght@700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="../css/launcher.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo"><a href="../index.html" style="text-decoration:none"><span class="logo-flex">Flex</span><span class="logo-server">Server</span></a></div>
+    <ul class="nav-links">
+      <li><a href="../index.html" data-i18n="nav_home">Ana Sayfa</a></li>
+      <li><a href="launcher.html" class="active" data-i18n="nav_launcher">Launcher'ı İndir</a></li>
+      <li><button class="ip-btn" id="copyIpBtn" onclick="copyIP()"><span class="ip-icon">⊕</span><span data-i18n="nav_ip">IP Kopyala</span></button><div class="ip-toast" id="ipToast" data-i18n="ip_copied">IP Kopyalandı!</div></li>
+      <li><button class="lang-btn" onclick="toggleLang()"><span id="langLabel">TR / EN</span></button></li>
+    </ul>
+  </nav>
+  <canvas id="bgCanvas"></canvas>
+  <section class="launcher-hero">
+    <div class="launcher-content">
+      <h1 class="launcher-title" data-i18n="launcher_title">FlexServer Launcher</h1>
+      <p class="launcher-subtitle" data-i18n="launcher_subtitle">Kur, başlat, oyna. Bu kadar basit.</p>
+      <div class="screenshots-area">
+        <div class="screenshot-slot"><div class="slot-placeholder"><span class="slot-icon">🖼</span><span data-i18n="slot_photo">Fotoğraf eklenecek</span></div></div>
+        <div class="screenshot-slot"><div class="slot-placeholder"><span class="slot-icon">🖼</span><span data-i18n="slot_photo">Fotoğraf eklenecek</span></div></div>
+        <div class="screenshot-slot"><div class="slot-placeholder"><span class="slot-icon">🖼</span><span data-i18n="slot_photo">Fotoğraf eklenecek</span></div></div>
+      </div>
+      <ul class="launcher-features">
+        <li>✔ <span data-i18n="lf1">Windows 10/11 destekli</span></li>
+        <li>✔ <span data-i18n="lf2">Otomatik güncelleme</span></li>
+        <li>✔ <span data-i18n="lf3">Java gerektirmez</span></li>
+        <li>✔ <span data-i18n="lf4">Tek tıkla FlexServer'a bağlan</span></li>
+      </ul>
+      <div class="download-area">
+        <button class="btn-download" id="downloadBtn" onclick="window.location.href='http://flexsmp.dev.tc/flexlauncher.exe'"><span class="dl-icon">⬇</span><span data-i18n="btn_download">İndir — FlexLauncher.exe</span></button></button>
+        <div class="countdown-wrap" id="countdownWrap" style="display:none">
+          <div class="countdown-bar-bg"><div class="countdown-bar" id="countdownBar"></div></div>
+          <p class="countdown-text" id="countdownText" data-i18n="countdown_text">İndirme <span id="secLeft">5</span> saniye içinde başlıyor…</p>
+        </div>
+      </div>
+      <p class="dl-note" data-i18n="dl_note">Windows Defender uyarısı alırsan "Yine de çalıştır" seçeneğine tıkla.</p>
+    </div>
+  </section>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/canvas.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/launcher.js"></script>
+</body>
+</html>
